@@ -6,6 +6,8 @@ var turnCount = 0;
 var turnCount02 = 0;
 var beforeNumber = 0;
 var afterNumber = 0;
+var beforeId = 0;
+var afterId = 0;
 
 function aaa(t) {
     alert(t);
@@ -31,13 +33,17 @@ function fncalert02(number,id) {
     document.getElementById(id).disabled = true;
     
     if (turnCount02 % 2 == 1) {
+        beforeId = id;
         beforeNumber = number;
     } else {
         afterNumber = number;
+        afterId = id;
         if (beforeNumber == afterNumber) {
             alert('Just do it!');
         } else {
             alert('See you later.');
+            document.getElementById(beforeId).disabled = false;
+            document.getElementById(afterId).disabled = false;
         }
     }
 }
