@@ -26,8 +26,10 @@ function fncalert01(number) {
     }
 }
 
-function fncalert02(number) {
+function fncalert02(number,id) {
     turnCount02++;
+    document.getElementById(id).disabled = true;
+    
     if (turnCount02 % 2 == 1) {
         beforeNumber = number;
     } else {
